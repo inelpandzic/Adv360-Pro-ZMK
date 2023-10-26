@@ -54,21 +54,31 @@
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5  &tog 0                                                                             &mo 2      &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp GRAVE  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5  &tog 0                                                                             &mo 3      &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp E     &kp R     &kp T   &none                                                                              &none      &kp Y   &kp U      &kp I      &kp O     &kp P     &kp BSLH
 &kp LCTRL  &kp A      &kp S     &kp D     &kp F     &kp G   &none            &none        &kp MACLOCK  &none  &none  &kp C_VOL_UP  &kp C_MUTE  &none      &kp H   &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V     &kp B   &none            &none        &key_repeat  &none  &none  &kp C_VOL_DN  &none       &none      &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 1      &kp GRAVE  &kp CAPS  &kp LALT  &kp LCMD          &lt 3 BACKSPACE  &lt 1 SPACE  &kp ENTER                  &none         &kp ENTER   &kp SPACE          &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &mo 1
+&mo 1      &kp GRAVE  &kp CAPS  &kp LALT  &kp LCMD          &lt 2 BACKSPACE  &lt 1 SPACE  &kp ENTER                  &none         &kp ENTER   &kp SPACE          &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &mo 1
             >;
         };
 
         layer_fn {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   &trans   &tog 0                                                &mo 2   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &none                                                 &none   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F6  &kp F7  &kp F8  &kp F9   &kp F10  &none   &trans  &trans  &none  &none  &trans  &trans  &none   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &kp F11  &kp F12  &none   &none   &trans  &none  &none  &trans  &none   &none   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&none  &none   &none   &none   &none    &none    &none                                            &none  &none  &none  &none  &none  &none  &none
+&none  &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &none                                            &none  &none  &none  &none  &none  &none  &none
+&none  &kp F6  &kp F7  &kp F8  &kp F9   &kp F10  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none   &none   &none   &kp F11  &kp F12  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none   &none   &none   &none             &none  &none  &none                &none  &none  &none         &none  &none  &none  &none  &none
+            >;
+        };
+
+        layer-hyper {
+            bindings = <
+&none  &none                  &none                  &none                  &none                  &none                  &none                                            &none  &none  &none  &none  &none  &none  &none
+&none  &none                  &none                  &none                  &none                  &none                  &none                                            &none  &none  &none  &none  &none  &none  &none
+&none  &kp LS(LG(LC(LA(A))))  &kp LS(LC(LA(LG(S))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none                  &none                  &none                  &none                  &kp LS(LA(LC(LG(V))))  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none                  &none                  &none                  &none                                         &none  &none  &none                &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
@@ -79,16 +89,6 @@
 &none  &none         &none         &none         &none         &none         &rgb_ug RGB_MEFS_CMD 5  &bt BT_CLR  &none  &none  &none  &bt BT_CLR  &bt BT_CLR  &rgb_ug RGB_MEFS_CMD 5  &none         &none         &none         &none         &none         &none
 &none  &none         &none         &none         &none         &none         &none                   &none       &none  &none  &none  &none       &none       &none                   &none         &none         &none         &none         &none         &none
 &none  &none         &none         &bl BL_INC    &bl BL_DEC                  &rgb_ug RGB_TOG         &bl BL_TOG  &none                &none       &bl BL_TOG  &rgb_ug RGB_TOG                       &bl BL_INC    &bl BL_DEC    &none         &none         &none
-            >;
-        };
-
-        layer-app {
-            bindings = <
-&trans  &trans                 &trans                 &trans                 &trans                 &trans                 &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                 &trans                 &trans                 &trans                 &trans                 &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(LG(LC(LA(A))))  &kp LS(LC(LA(LG(S))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                 &trans                 &trans                 &trans                 &kp LS(LA(LC(LG(V))))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                 &trans                 &trans                 &trans                                        &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };

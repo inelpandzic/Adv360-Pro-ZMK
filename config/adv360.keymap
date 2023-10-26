@@ -43,8 +43,8 @@
             key-positions = <30 32>;
         };
 
-        mo-layer-hyper {
-            bindings = <&mo 2>;
+        sl-layer-hyper {
+            bindings = <&sl 2>;
             key-positions = <31 32>;
         };
     };

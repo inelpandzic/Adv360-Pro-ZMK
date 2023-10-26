@@ -39,13 +39,13 @@
         compatible = "zmk,combos";
 
         esc {
-            bindings = <&kp ESC>;
-            key-positions = <31 32>;
+            bindings = <&kp ESCAPE>;
+            key-positions = <18 17>;
         };
 
-        tog-fn-layer {
-            bindings = <&tog 1>;
-            key-positions = <18 17>;
+        mo-layer-hyper {
+            bindings = <&mo 2>;
+            key-positions = <31 32>;
         };
     };
 

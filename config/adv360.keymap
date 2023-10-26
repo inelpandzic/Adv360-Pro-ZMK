@@ -40,7 +40,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <18 17>;
+            key-positions = <30 32>;
         };
 
         mo-layer-hyper {

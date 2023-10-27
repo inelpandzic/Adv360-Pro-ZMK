@@ -42,11 +42,6 @@
             bindings = <&kp ESCAPE>;
             key-positions = <30 32>;
         };
-
-        sl-layer-hyper {
-            bindings = <&sl 2>;
-            key-positions = <31 32>;
-        };
     };
 
     keymap {

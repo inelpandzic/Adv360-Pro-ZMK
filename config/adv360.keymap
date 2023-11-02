@@ -42,6 +42,20 @@
             bindings = <&kp ESCAPE>;
             key-positions = <30 32>;
         };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <16 18>;
+        };
+    };
+
+    macros {
+        copypastefind: copypastefind {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C) &kp LG(F) &kp LG(A) &kp LG(V)>;
+            label = "COPYPASTEFIND";
+        };
     };
 
     keymap {
@@ -49,21 +63,21 @@
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2       &kp N3      &kp N4      &kp N5  &none                                                                       &mo 4      &kp N6  &kp N7      &kp N8      &kp N9       &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q   &kp W        &kp E       &lt 3 R     &kp T   &none                                                                       &none      &kp Y   &lt 3 U     &kp I       &kp O        &kp P     &kp BSLH
-&kp LCTRL  &kp A   &hm LCTRL S  &hm LALT D  &hm LCMD F  &kp G   &none  &none           &kp MACLOCK  &none  &none  &kp C_VOL_UP  &kp C_MUTE  &none      &kp H   &hm LCMD J  &hm LALT K  &hm RCTRL L  &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X        &kp C       &kp V       &kp B   &none  &none           &key_repeat  &none  &none  &kp C_VOL_DN  &none       &none      &kp N   &kp M       &kp COMMA   &kp DOT      &kp FSLH  &kp RSHFT
-&none      &none   &none        &kp LALT    &kp LCMD            &mo 1  &kp LEFT_SHIFT  &kp ENTER                  &none         &kp ENTER   &kp SPACE          &none       &none       &none        &none     &none
+&kp GRAVE  &kp N1  &kp N2       &kp N3      &kp N4      &kp N5  &none                                                              &mo 4      &kp N6  &kp N7      &kp N8      &kp N9       &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W        &kp E       &lt 3 R     &kp T   &none                                                              &none      &kp Y   &lt 3 U     &kp I       &kp O        &kp P     &kp BSLH
+&kp LCTRL  &kp A   &hm LCTRL S  &hm LALT D  &hm LCMD F  &kp G   &none  &none  &kp MACLOCK  &none  &none  &kp C_VOL_UP  &kp C_MUTE  &none      &kp H   &hm LCMD J  &hm LALT K  &hm RCTRL L  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X        &kp C       &kp V       &kp B   &none  &none  &key_repeat  &none  &none  &kp C_VOL_DN  &none       &none      &kp N   &kp M       &kp COMMA   &kp DOT      &kp FSLH  &kp RSHFT
+&none      &none   &none        &none       &none               &mo 1  &mo 2  &kp ENTER                  &none         &kp ENTER   &kp SPACE          &none       &none       &none        &none     &none
             >;
         };
 
         layer-shortcuts {
             bindings = <
-&none  &none      &none                  &none                  &none                  &none  &none                                              &none   &none           &none          &none                 &none                  &none      &none
-&none  &none      &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &none  &none                                              &none   &none           &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none      &none
-&none  &kp LC(F)  &kp LS(LC(LA(LG(S))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &none  &none  &none   &none  &none  &none  &none  &none   &none   &kp DEL         &kp BACKSPACE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EQUAL  &none
-&none  &none      &none                  &none                  &none                  &none  &none  &none   &none  &none  &none  &none  &none   &none   &kp UNDERSCORE  &kp MINUS      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none      &none
-&none  &none      &none                  &none                  &none                         &none  &trans  &none                &none  &trans  &trans                  &none          &none                 &none                  &none      &none
+&none  &none                  &none                  &none                  &none                  &none  &none                                              &none   &none           &none  &none  &none  &none      &none
+&none  &kp LS(LA(LC(LG(Q))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &none  &none                                              &none   &kp LG(C)       &none  &none  &none  &kp LG(V)  &none
+&none  &none                  &kp LS(LC(LA(LG(S))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &none  &none  &none   &none  &none  &none  &none  &none   &none   &copypastefind  &none  &none  &none  &none      &none
+&none  &none                  &none                  &none                  &none                  &none  &none  &none   &none  &none  &none  &none  &none   &none   &none           &none  &none  &none  &none      &none
+&none  &none                  &none                  &none                  &none                         &none  &trans  &none                &none  &trans  &trans                  &none  &none  &none  &none      &none
             >;
         };
 
@@ -95,6 +109,15 @@
 &none  &none         &none         &none         &none         &none         &none                   &none       &none  &none  &none  &none       &none       &none                   &none         &none         &none         &none         &none         &none
 &none  &none         &none         &bl BL_INC    &bl BL_DEC                  &rgb_ug RGB_TOG         &bl BL_TOG  &none                &none       &bl BL_TOG  &rgb_ug RGB_TOG                       &bl BL_INC    &bl BL_DEC    &none         &none         &none
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        fn-layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };

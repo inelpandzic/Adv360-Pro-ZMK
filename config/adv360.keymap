@@ -80,8 +80,8 @@
             bindings = <
 &none  &mt LG(NUMBER_1) LC(NUMBER_1)  &mt LG(NUMBER_2) LC(NUMBER_2)  &mt LG(NUMBER_3) LC(NUMBER_3)  &mt LG(NUMBER_4) LC(NUMBER_4)  &mt LG(N5) LC(N5)    &none                                              &none   &none           &none  &none  &none  &none      &none
 &none  &kp LS(LA(LC(LG(Q))))          &kp LS(LA(LC(LG(W))))          &kp LS(LA(LC(LG(E))))          &kp LS(LA(LC(LG(R))))          &mt LS(LG(T)) LG(T)  &none                                              &none   &kp LG(C)       &none  &none  &none  &kp LG(V)  &none
-&none  &none                          &kp LS(LC(LA(LG(S))))          &kp LS(LA(LC(LG(D))))          &kp LS(LA(LC(LG(F))))          &none                &none  &none   &none  &none  &none  &none  &none   &none   &copypastefind  &none  &none  &none  &none      &none
-&none  &none                          &none                          &none                          &none                          &none                &none  &none   &none  &none  &none  &none  &none   &none   &none           &none  &none  &none  &none      &none
+&none  &none                          &kp LS(LC(LA(LG(S))))          &kp LS(LA(LC(LG(D))))          &kp LS(LA(LC(LG(F))))          &kp LG(LS(F))        &none  &none   &none  &none  &none  &none  &none   &none   &copypastefind  &none  &none  &none  &none      &none
+&none  &none                          &none                          &kp LG(C)                      &kp LG(V)                      &none                &none  &none   &none  &none  &none  &none  &none   &none   &none           &none  &none  &none  &none      &none
 &none  &none                          &none                          &none                          &none                                               &none  &trans  &none                &none  &trans  &trans                  &none  &none  &none  &none      &none
             >;
         };

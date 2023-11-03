@@ -68,11 +68,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE  &mt EXCLAMATION N1  &mt AT_SIGN N2  &mt HASH N3  &mt DOLLAR N4  &mt PERCENT N5  &none                                                              &mo 4      &mt CARET N6  &mt AMPERSAND N7  &mt ASTERISK N8  &kp N9       &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q               &kp W           &kp E        &lt 3 R        &kp T           &none                                                              &none      &kp Y         &lt 3 U           &kp I            &kp O        &kp P     &kp BSLH
-&kp LCTRL  &kp A               &hm LCTRL S     &hm LALT D   &hm LCMD F     &kp G           &none  &none  &kp MACLOCK  &none  &none  &kp C_VOL_UP  &kp C_MUTE  &none      &kp H         &hm LCMD J        &hm LALT K       &hm RCTRL L  &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z               &kp X           &kp C        &kp V          &kp B           &none  &none  &key_repeat  &none  &none  &kp C_VOL_DN  &none       &none      &kp N         &kp M             &kp COMMA        &kp DOT      &kp FSLH  &kp RSHFT
-&none      &none               &none           &none        &none                          &mo 1  &mo 2  &kp ENTER                  &none         &kp ENTER   &kp SPACE                &none             &none            &none        &none     &none
+&kp GRAVE  &mt EXCLAMATION N1  &mt AT_SIGN N2  &mt HASH N3  &mt DOLLAR N4  &mt PERCENT N5  &none                                                              &mo 4      &mt CARET N6  &mt AMPERSAND N7  &mt ASTERISK N8  &kp N9       &kp N0                     &kp BACKSPACE
+&kp TAB    &kp Q               &kp W           &kp E        &lt 3 R        &kp T           &none                                                              &none      &kp Y         &lt 3 U           &kp I            &kp O        &kp P                      &kp BSLH
+&kp LCTRL  &hm LEFT_SHIFT A    &hm LCTRL S     &hm LALT D   &hm LCMD F     &kp G           &none  &none  &kp MACLOCK  &none  &none  &kp C_VOL_UP  &kp C_MUTE  &none      &kp H         &hm LCMD J        &hm LALT K       &hm RCTRL L  &hm RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z               &kp X           &kp C        &kp V          &kp B           &none  &none  &key_repeat  &none  &none  &kp C_VOL_DN  &none       &none      &kp N         &kp M             &kp COMMA        &kp DOT      &kp FSLH                   &kp RSHFT
+&none      &none               &none           &none        &none                          &mo 1  &mo 2  &kp ENTER                  &none         &kp ENTER   &kp SPACE                &none             &none            &none        &none                      &none
             >;
         };
 
